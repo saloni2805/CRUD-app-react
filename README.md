@@ -27,3 +27,19 @@ Click the **Explore Users** button to navigate back to the user list.
 1. Clone the repository:
    ```sh
    git clone <repository_url>
+
+2. Navigate to the project directory:
+    ```sh
+   cd project-directory
+
+3. Install dependencies:
+     ```sh
+   npm install
+
+4. Start the JSON Server (if required):
+     ```sh
+   json-server --watch db.json --port 5000
+
+5. Start the React app:
+     ```sh
+   npm run dev
