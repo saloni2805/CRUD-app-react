@@ -1,12 +1,29 @@
-# React + Vite
+# About This App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple **CRUD (Create, Read, Update, Delete) Application** built using **React, JSON Server, and React Router**. It allows users to **add, edit, delete, and view users** seamlessly.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ⚛️ **React** (Frontend)
+- 🌐 **JSON Server** (Backend API)
+- 🚀 **React Router** (Navigation)
+- 🎨 **Daisy UI & Tailwind CSS** (Styling)
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 📝 Add new users
+- ✏️ Edit user details
+- ❌ Delete users
+- 📋 View all users
+
+## Navigation
+
+Click the **Explore Users** button to navigate back to the user list.
+
+---
+
+## How to Run the Project
+
+1. Clone the repository:
+   ```sh
+   git clone <repository_url>
