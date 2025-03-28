@@ -1,76 +1,68 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Home = () => {
-  const navigate = useNavigate();
-  const [users, setUsers] = useState([]);
-
-  const getAllUsers = async () => {
-    const res = await axios.get("http://localhost:3000/users");
-    setUsers(res.data);
-  };
-
-  useEffect(() => {
-    getAllUsers();
-  }, []);
-
-  if (users.length === 0)
-    return <h1 className="text-center">No Users Found...!</h1>;
-
-  const deleteUserHandler = async (id) => {
-    //logic for showing latest cards
-    const latestUsers = users.filter((user) => user.id !== id);
-    setUsers(latestUsers);
-    //api call
-    try {
-      await axios.delete(`http://localhost:3000/users/${id}`);
-      alert("user deleted successfully..!");
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
   return (
-    <div className="flex gap-5 flex-wrap justify-center items-center my-15 h-full">
-      {users.map((user) => (
-        <div
-          key={user.id}
-          className="card card-side bg-base-300 shadow-sm w-[30%] mt-5"
-        >
-          <figure>
-            <img src={user.profileUrl} alt="user-photo" className="w-50" />
-          </figure>
-          <div className="card-body">
-            <h1 className="text-3xl font-extrabold text-gray-200">
-              {user.firstName} {user.lastName}
-            </h1>
-            <h2 className="text-gray-100 font-bold mt-2">
-              ✉️ Email: {user.email}
-            </h2>
-            <h2 className="text-gray-100 font-bold mt-2">
-              🎂 Gender: {user.gender}
-            </h2>
-            <h2 className="text-gray-100 font-bold mt-2">
-              📞 Mobile: {user.mobile}
-            </h2>
-            <div className="mt-auto flex justify-between gap-4 border-t pt-4">
-              <button
-                className="btn btn-primary flex-1"
-                onClick={() => navigate(`/edit/${user.id}`)}
-              >
-                Edit
-              </button>
-              <button
-                className="btn btn-error flex-1"
-                onClick={() => deleteUserHandler(user.id)}
-              >
-                Delete
-              </button>
-            </div>
+    <div
+      className="flex flex-col items-center justify-between min-h-[90vh] bg-cover bg-center p-6 relative"
+      style={{
+        backgroundImage:
+          "url('https://www.figma.com/community/resource/acb63030-a130-4dc8-8e78-d388579a3327/thumbnail')",
+      }}
+    >
+      {/* Dark Overlay for Readability */}
+      <div className="absolute inset-0 bg-black opacity-50"></div>
+
+      {/* Content-1 (Heading & Description) */}
+      <div className="relative text-center text-white mt-16">
+        <h1 className="text-5xl font-bold mb-4">Welcome to CRUD App</h1>
+        <p className="text-lg max-w-xl mx-auto">
+          Manage your users efficiently with our simple and powerful CRUD
+          application. Add, edit, delete, and view users with ease.
+        </p>
+
+        {/* Buttons */}
+        <div className="mt-6 space-x-4">
+          <Link to="/users" className="btn btn-primary text-lg">
+            View Users
+          </Link>
+          <Link
+            to="/add"
+            className="btn btn-outline text-lg text-white border-white"
+          >
+            Add User
+          </Link>
+        </div>
+      </div>
+
+      {/* Content-3 (Moved to the Bottom) */}
+      <div className="relative w-full flex flex-col items-center mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl">
+          <div className="bg-white shadow-md p-6 rounded-lg text-center">
+            <h3 className="text-xl font-semibold text-gray-800 mb-2">
+              Easy to Use
+            </h3>
+            <p className="text-gray-600">
+              Simple UI for managing users quickly.
+            </p>
+          </div>
+          <div className="bg-white shadow-md p-6 rounded-lg text-center">
+            <h3 className="text-xl font-semibold text-gray-800 mb-2">
+              Fully Responsive
+            </h3>
+            <p className="text-gray-600">
+              Works on all devices, including mobile.
+            </p>
+          </div>
+          <div className="bg-white shadow-md p-6 rounded-lg text-center">
+            <h3 className="text-xl font-semibold text-gray-800 mb-2">
+              Fast & Secure
+            </h3>
+            <p className="text-gray-600">
+              Built with modern technologies like React & Node.js.
+            </p>
           </div>
         </div>
-      ))}
+      </div>
     </div>
   );
 };

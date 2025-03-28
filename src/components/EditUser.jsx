@@ -45,7 +45,7 @@ const EditUser = () => {
     try {
       await axios.put(`http://localhost:3000/users/${id}`, userData);
       alert("User Updated successfully");
-      navigate("/");
+      navigate("/users");
     } catch (error) {
       console.log(error);
     }
