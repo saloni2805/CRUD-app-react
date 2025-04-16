@@ -19,7 +19,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-[90vh] bg-base-100 p-6">
+    <div className="flex flex-col items-center justify-center min-h-[100vh] bg-base-100 ">
       <div className="bg-base-300 shadow-md rounded-lg p-8 w-full max-w-lg">
         <h2 className="text-5xl font-extrabold text-center text-white mb-6">
           Contact Us

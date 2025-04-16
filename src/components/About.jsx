@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 const About = () => {
   const navigate = useNavigate();
   return (
-    <div className="max-w-4xl mx-auto p-6 mt-20">
+    <div className="max-w-4xl mx-auto p-6 min-h-[110vh]" >
       <div className="card bg-base-300 shadow-lg p-6">
         <h1 className="text-5xl font-bold text-primary text-center">About</h1>
         <p className="text-gray-300 text-lg mt-10 leading-relaxed text-center max-w-2xl mx-auto">

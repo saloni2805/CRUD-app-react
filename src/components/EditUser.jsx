@@ -53,13 +53,13 @@ const EditUser = () => {
 
   return (
     <div>
-      <h1 className="text-[50px] font-extrabold text-center bg-slate-800 text-white py-3">
+      <h1 className="text-[40px] font-extrabold text-center bg-slate-800 text-white py-3">
         Edit User
       </h1>
 
       <form
         onSubmit={editUserHandler}
-        className="flex flex-col gap-5 items-center justify-center mt-10"
+        className="flex flex-col gap-5 items-center min-h-[110vh] justify-center  "
       >
         <div className="w-[50%] flex items-center gap-3 py-2">
           <label className="font-bold text-3xl whitespace-nowrap">

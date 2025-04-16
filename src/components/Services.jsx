@@ -38,7 +38,7 @@ const Services = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-[90vh] bg-base-100 p-6">
+    <div className="flex flex-col items-center justify-center  bg-base-100 p-6">
       <h1 className="text-5xl font-bold text-white mb-6">Our Services</h1>
       <p className="text-lg text-white max-w-2xl text-center mb-8">
         Our CRUD app provides a seamless experience for managing users

@@ -32,7 +32,7 @@ const Users = () => {
   };
 
   return (
-    <div className="flex gap-5 flex-wrap justify-center items-center my-15 h-full">
+    <div className="flex gap-5 flex-wrap justify-center items-center my-15 ">
       {users.map((user) => (
         <div
           key={user.id}
